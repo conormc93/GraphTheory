@@ -100,7 +100,22 @@ for len(s) > 0 {
   return string(pofix)
 }
 
-func 
+//Gets current array
+//Adds state s to it
+func addState(l []*state, s *state,a *state){
+    l = append(l,s)
+
+    //Checks if s has e arrows from it and makes sure its not an accept state
+    if s != a && s.symbol = 0{
+
+        //Follow first edge and call same function for state pointed to by edge 1
+        l = addState(l,s.edge1,a)
+        //Check if nil,if not do same thing
+        if s.edge2 != nil {
+            l.addState(l, s.edge2,a)
+        }
+    }
+}
 
 //Figure out if po matches s
 func pomatch(po string,s string) bool {
@@ -123,7 +138,7 @@ func pomatch(po string,s string) bool {
     for _,r := range s {
         for _, c := range current {
             if c.symbol == r {
-                next = addState(next[:],s.edge1,ponfa.accept)
+                next = addState(next[:],c.edge1,ponfa.accept)
             }
         }
         //Swap current for next and reset next to empty array
