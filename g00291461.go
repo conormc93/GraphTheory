@@ -158,5 +158,8 @@ func pomatch(po string, s string) bool {
 }
 
 func main() {
-	fmt.Println(pomatch("ab.c*|", "cccc"))
+	var userInput string
+	fmt.Println("Enter Regex Expression: ")
+	fmt.Scan(&userInput)
+	fmt.Println(pomatch("ab.c*|", userInput))
 }
