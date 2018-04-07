@@ -159,7 +159,12 @@ func pomatch(po string, s string) bool {
 
 func main() {
 	var userInput string
-	fmt.Println("Enter Regex Expression: ")
+	var regexInput string
+	fmt.Println("Enter String You Want to Test: ")
 	fmt.Scan(&userInput)
-	fmt.Println(pomatch("ab.c*|", userInput))
+
+	fmt.Println("Enter the Regex You want to Test the String Against: ")
+	fmt.Scan(&regexInput)
+
+	fmt.Println(pomatch(regexInput, userInput))
 }
