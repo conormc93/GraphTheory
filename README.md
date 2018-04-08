@@ -6,7 +6,7 @@
 
 ## This is a go application that can:
 1. Build a postfix expression from an infix expression. 
-2. Build an NFA from a regular postfix expression. 
+2. Build an NFA from a regular postfix expression.
 3. Check to see if a string matches a regular expression.
 
 ## Running the program
